@@ -1,0 +1,306 @@
+/* FONTS */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* CUSTOM PROPS */
+:root {
+    --text-color: #333;
+    --brand-green-color: #0A775F;
+    --black-color: #000;
+    --brand-green-hover-color: rgb(10, 119, 95, 0.8);
+    --brand-green-active-color: rgb(10, 119, 95, 0.6);
+}
+/* GLOBAL STYLES */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--text-color);
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* CONTAINER SYTLES */
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* BUTTON STYLES */
+.site-btn {
+    border-radius: 100px;
+    padding: 16px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+}
+.green-btn {
+    background-color: var(--brand-green-color);
+}
+.green-btn:hover {
+    background-color: var(--brand-green-hover-color);
+}
+.green-btn:active {
+    background-color: var(--brand-green-active-color);
+}
+
+
+/* HEADER AND HERO WRAPPER */
+.header-and-hero-wrapper {
+    background-image: url("../images/wrapper-bg-img.jpg");
+}
+/* SITE HEADER */
+.site-header {
+    padding: 40px 0px;
+}
+.site-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+.site-header-logo-link {
+    display: flex;
+    text-decoration: none;
+}
+.site-header-logo-link:hover {
+    opacity: 0.8;
+}
+.site-header-logo-link:active {
+    opacity: 0.6;
+}
+.site-header-logo-img {
+    width: 235px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+/* SITENAV */
+.sitenav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.sitenav-item:not(:last-child) {
+    margin-right: 40px;
+}
+.sitenav-item-link {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.sitenav-item-link:hover {
+    color: var(--brand-green-color);
+}
+.sitenav-item-link:active {
+    opacity: 0.6;
+}
+
+/* SITE HERO */
+.hero-container {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.hero-text-wrapper {
+    width: 100%;
+    max-width: 464px;
+    margin-left: 150px;
+    margin-top: 116px;
+}
+.hero-title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    color: var(--black-color);
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+.hero-text {
+    color: var(--black-color);
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 34px;
+}
+.hero-img-wrapper {
+    position: relative;
+}
+.hero-round-img {
+    width: 213px;
+    height: 214px;
+    object-fit: contain;
+    position: absolute;
+    top: -81px;
+    left: -92px;
+}
+.site-hero-img {
+    width: 710px;
+    height: 696px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* MAIN SECTION */
+.main {
+    flex-grow: 1;
+}
+/* OUR COLLECTION */
+.our-collection {
+    padding: 20px;
+    overflow: hidden;
+}
+.our-collection-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 50px 0;
+    background-image: url("../images/our-collection-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.our-collection-title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 59px;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    color: var(--black-color);
+    text-align: center;
+}
+.our-collection-list {
+    width: 100%;
+    max-width: 1114px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+.our-collection-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.our-collection-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.our-collection-item:nth-child(odd) .our-collection-item-text-wrapper {
+    padding-left: 117px;
+    padding-right: 117px;
+}
+.our-collection-item:nth-child(even) .our-collection-item-text-wrapper {
+    padding-left: 117px;
+    padding-right: 117px;
+}
+.our-collection-item-img {
+    width: 450px;
+    height: 375px;
+    object-fit: contain;
+    display: block;
+}
+.our-collection-item-title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.our-collection-item-text {
+    font-size: 22px;
+    line-height: 34px;
+}
+.our-collection-left-leaf {
+    position: absolute;
+    top: 50px;
+    left: -178px;
+}
+.our-collection-left-light-leaf {
+    position: absolute;
+    bottom: 170px;
+    left: -206px;
+}
+.our-collection-left-right-leaf {
+    position: absolute;
+    bottom: 462px;
+    right: -228px;
+    z-index: 2;
+}
+.our-collection-right-light-leaf {
+    position: absolute;
+    bottom: 535px;
+    right: -170px;
+    z-index: 1;
+}
+
+
+
+
+
+/* RETINA BG IMAGES */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .header-and-hero-wrapper {
+        background-image: url("../images/wrapper-bg-img@2x.jpg");
+    }
+    .our-collection-container {
+        background-image: url("../images/our-collection-bg@2x.jpg");
+    }
+}
